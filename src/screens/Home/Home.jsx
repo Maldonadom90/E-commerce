@@ -1,19 +1,24 @@
 import { FlatList, View } from "react-native";
 
 import { CategoryItem } from "./components";
-import { Header } from "../../components";
+import { Header } from "../../Components";
 import React from "react";
-import dataCategories from "../../data/dataCategories";
+import dataCategories from "../../data/dataCategory";
 import styles from "./Home.style";
 
-const Home = () => {
+const Home = ({ setCategorySelected }) => {
   return (
     <View style={styles.container}>
-      <Header title={"Categorias"} />
+      <Header title={"Categories"} />
       <FlatList
         data={dataCategories}
         keyExtractor={(category) => category}
-        renderItem={({ item }) => <CategoryItem category={item} />}
+        renderItem={({ item }) => (
+          <CategoryItem
+            category={item}
+            setCategorySelected={setCategorySelected}
+          />
+        )}
       />
     </View>
   );

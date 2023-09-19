@@ -9,5 +9,6 @@ export default styles = StyleSheet.create({
     elevation: 10,
     shadowOpacity: 1,
     shadowRadius: 1,
+    borderRadius: 10,
   },
 });
