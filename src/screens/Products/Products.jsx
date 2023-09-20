@@ -1,13 +1,21 @@
-import { FlatList, Text, TouchableOpacity, View } from "react-native";
-import { Header, SearchInput } from "../../Components";
-import React, { useEffect, useState } from "react";
+import {
+  FlatList,
+  Text,
+  TouchableOpacity,
+  View,
+  Pressable,
+} from 'react-native';
+import { Header, SearchInput } from '../../Components';
+import React, { useEffect, useState } from 'react';
 
-import allProducts from "../../data/products";
-import styles from "./Products.style";
+import allProducts from '../../data/products';
+import styles from './Products.style';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
-const Products = ({ category, setProductSelected }) => {
+const Products = ({ navigation, route }) => {
   const [arrProducts, setArrProducts] = useState([]);
-  const [keyword, setKeyword] = useState("");
+  const [keyword, setKeyword] = useState('');
+  const { category } = route.params;
 
   useEffect(() => {
     if (category) {
@@ -34,12 +42,17 @@ const Products = ({ category, setProductSelected }) => {
         <FlatList
           data={arrProducts}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => setProductSelected(item)}>
-              <Text>{item.title}</Text>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Details', { product: item })}
+            >
+              <Text style={styles.text}>{item.title}</Text>
             </TouchableOpacity>
           )}
           keyExtractor={(item) => item.id}
         />
+        <Pressable onPress={() => navigation.goBack()}>
+          <AntDesign name="closecircleo" size={35} color={'black'} />
+        </Pressable>
       </View>
     </View>
   );
