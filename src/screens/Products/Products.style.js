@@ -12,6 +12,7 @@ export default styles = StyleSheet.create({
     marginTop: 20,
     alignItems: 'center',
     width: '100%',
+    paddingBottom: 30,
   },
   text: {
     fontSize: 20,

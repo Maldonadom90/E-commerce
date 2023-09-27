@@ -5,7 +5,7 @@ import {
   View,
   Pressable,
 } from 'react-native';
-import { Header, SearchInput } from '../../Components';
+import { Header, SearchInput } from '../../components';
 import React, { useEffect, useState } from 'react';
 
 import allProducts from '../../data/products';
@@ -51,7 +51,7 @@ const Products = ({ navigation, route }) => {
           keyExtractor={(item) => item.id}
         />
         <Pressable onPress={() => navigation.goBack()}>
-          <AntDesign name="closecircleo" size={35} color={'black'} />
+          <AntDesign name="doubleleft" size={25} color={'black'} />
         </Pressable>
       </View>
     </View>

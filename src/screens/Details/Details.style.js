@@ -1,25 +1,36 @@
-import { StyleSheet } from "react-native";
-import { colors } from "../../constants/colors";
+import { StyleSheet } from 'react-native';
+import { colors } from '../../constants/colors';
 
 export default styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    alignItems: 'center',
     backgroundColor: colors.tertiary,
   },
+  imageContainer: {
+    height: '70%',
+    width: '100%',
+  },
   image: {
-    paddingTop: 10,
-    height: "50%",
-    width: "90%",
+    height: '50%',
+    marginTop: 5,
+    borderRadius: 10,
   },
   title: {
-    fontSize: 30,
+    fontSize: 20,
     marginVertical: 15,
-    fontFamily: "Croissant",
+    fontFamily: 'Croissant',
   },
   price: {
-    fontSize: 20,
-    fontWeight: "bold",
-    marginVertical: 15,
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginVertical: 10,
+  },
+  buttons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: 100,
   },
 });

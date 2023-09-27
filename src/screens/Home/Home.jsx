@@ -1,9 +1,9 @@
 import { FlatList, View } from 'react-native';
 
 import { CategoryItem } from './components';
-import { Header } from '../../Components';
+import { Header } from '../../components';
 import React from 'react';
-import dataCategories from '../../data/dataCategory';
+import dataCategories from '../../data/dataCategories';
 import styles from './Home.style';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -11,7 +11,7 @@ const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
-        <Header title={'Categories'} />
+        <Header title={'Categorías'} />
         <View style={styles.listContainer}>
           <FlatList
             data={dataCategories}
