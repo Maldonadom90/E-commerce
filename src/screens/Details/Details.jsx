@@ -1,36 +1,33 @@
-import { Image, Text, View, Pressable } from 'react-native';
+import { Image, Pressable, SafeAreaView, Text, View } from 'react-native';
 
-import { Header } from '../../components';
 import React from 'react';
+import { addItem } from '../../features/cart/cartSlice';
 import styles from './Details.style';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import Counter from '../../components/Counter';
+import { useDispatch } from 'react-redux';
 
-const Details = ({ route, navigation }) => {
+const Details = ({ route }) => {
   const { product } = route.params;
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addItem({ ...product, quantity: 1 }));
+  };
   return (
-    <View style={styles.container}>
-      <Header title={'Detalle'} />
-      <View>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.imageContainer}>
         <Image
           style={styles.image}
           source={{ uri: product.images[0] }}
-          resizeMode="contain"
+          resizeMode="cover"
         />
-        <Text style={styles.title}>{product.title}</Text>
-        <Text>{product.description}</Text>
-        <Text style={styles.price}>{`$ ${product.price}`}</Text>
-        <Counter />
       </View>
-      <View style={styles.buttons}>
-        <Pressable onPress={() => navigation.goBack()}>
-          <AntDesign name="doubleleft" size={25} color={'black'} />
-        </Pressable>
-        <Pressable onPress={() => navigation.navigate('Home')}>
-          <AntDesign name="home" size={25} color={'black'} />
-        </Pressable>
-      </View>
-    </View>
+      <Text style={styles.title}>{product.title}</Text>
+      <Text>{product.description}</Text>
+      <Text style={styles.price}>{`$ ${product.price}`}</Text>
+      <Pressable onPress={handleAddToCart}>
+        <Text>Add to cart</Text>
+      </Pressable>
+    </SafeAreaView>
   );
 };
 
