@@ -1,11 +1,12 @@
 import { Pressable, Text, TextInput, View } from 'react-native';
 import React, { useState } from 'react';
+
 import { setUser } from '../../features/auth/authSlice';
 import styles from './Signup.styles';
 import { useDispatch } from 'react-redux';
 import { useSignUpMutation } from '../../services/authApi';
 
-const Signup = ({ navigation }) => {
+const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPass, setConfirmPass] = useState('');

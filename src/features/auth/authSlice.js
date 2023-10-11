@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   user: null,
   token: null,
-  localId: null,
   imageCamera: null,
 };
 
@@ -12,21 +11,14 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     setUser: (state, action) => {
-      /*setea el nuevo usuario*/
+      console.log(action.payload.data.email);
       return {
-        user: action.payload.email,
-        token: action.payload.idToken,
-        localId:
-          action.payload.localId /*agrega la imagen tomada por el usuario*/,
+        user: action.payload.data.email,
+        token: action.payload.data.idToken,
       };
     },
     clearUser: () => {
-      /*para cerrar cesión*/
-      return {
-        user: null,
-        token: null,
-        localId: null,
-      }; /*devuelve los estados a nulo*/
+      return { user: null, token: null };
     },
     setCameraImage: (state, action) => {
       return {
