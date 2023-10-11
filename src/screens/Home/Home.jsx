@@ -11,7 +11,7 @@ const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar animated={true} barStyle={'dark-content'} />
-      <Header title={'Categories'} />
+      <Header title={'Categorías'} />
       <View style={styles.listContainer}>
         {!isLoading && (
           <FlatList

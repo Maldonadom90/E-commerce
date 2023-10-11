@@ -6,6 +6,7 @@ export default styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: colors.tertiary,
   },
   loginContainer: {
     width: '100%',
@@ -15,14 +16,17 @@ export default styles = StyleSheet.create({
   },
   inputEmail: {
     width: '95%',
-    backgroundColor: colors.secondary,
+    backgroundColor: colors.primary,
     height: 30,
     marginVertical: 15,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingStart: 20,
+    borderRadius: 10,
+    color: 'white',
   },
   loginButton: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.secondary,
     width: '50%',
     height: 50,
     borderRadius: 10,

@@ -27,33 +27,41 @@ const Signup = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.loginContainer}>
-        <Text>Sing up to start</Text>
+        <Text style={{ fontSize: 20, color: 'white' }}>Registrarse</Text>
         <TextInput
           style={styles.inputEmail}
           value={email}
           onChangeText={setEmail}
+          placeholder="E-mail"
+          placeholderTextColor={'white'}
         />
         <TextInput
           style={styles.inputEmail}
           value={password}
           onChangeText={setPassword}
+          placeholder="Contraseña"
+          placeholderTextColor={'white'}
         />
         <TextInput
           style={styles.inputEmail}
           value={confirmPass}
           onChangeText={setConfirmPass}
+          placeholder="Confirmar contraseña"
+          placeholderTextColor={'white'}
         />
         <Pressable style={styles.loginButton} onPress={onSubmit}>
-          <Text style={{ color: 'white' }}>Sign up</Text>
+          <Text style={{ color: 'black' }}>Registrarse</Text>
         </Pressable>
-        <Text>Already have an account?</Text>
+        <Text style={{ paddingBottom: 10, color: 'white' }}>
+          Ya tienes una cuenta registrada?
+        </Text>
         <Pressable
           style={styles.loginButton}
           onPress={() =>
             navigation.navigate('Login')
           } /*boton de navegación hacia login*/
         >
-          <Text style={{ color: 'white' }}>Login</Text>
+          <Text style={{ color: 'black' }}>Iniciar sesión</Text>
         </Pressable>
       </View>
     </View>

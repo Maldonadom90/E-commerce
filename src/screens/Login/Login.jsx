@@ -32,26 +32,32 @@ const Login = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.loginContainer}>
-        <Text>Login to start</Text>
+        <Text style={{ fontSize: 20 }}>Ingresa tu cuenta</Text>
         <TextInput
           style={styles.inputEmail}
           value={email}
           onChangeText={setEmail}
+          placeholder="E-mail"
+          placeholderTextColor={'white'}
         />
         <TextInput
           style={styles.inputEmail}
           value={password}
           onChangeText={setPassword}
+          placeholder="Contraseña"
+          placeholderTextColor={'white'}
         />
         <Pressable style={styles.loginButton} onPress={onSubmit}>
-          <Text style={{ color: 'white' }}>Login</Text>
+          <Text style={{ color: 'white' }}>Iniciar sesión</Text>
         </Pressable>
-        <Text>No have an account?</Text>
+        <Text style={{ paddingBottom: 10 }}>
+          No tienes una cuenta registrada?
+        </Text>
         <Pressable
           style={styles.loginButton}
           onPress={() => navigation.navigate('Signup')}
         >
-          <Text style={{ color: 'white' }}>Sign up</Text>
+          <Text style={{ color: 'white' }}>Registrarse</Text>
         </Pressable>
       </View>
     </View>
