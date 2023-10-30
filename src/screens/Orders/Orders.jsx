@@ -1,21 +1,21 @@
-import { Text, View } from 'react-native';
+import { FlatList, Text, View } from 'react-native';
 
 import React from 'react';
 import styles from './Orders.styles';
-import { Header } from '../../components';
+import { useGetOrdersQuery } from '../../services/shopApi';
 
 const Orders = () => {
+  const { data, isLoading } = useGetOrdersQuery();
+
   return (
     <View styles={styles.container}>
-      <Header title={'Órdenes'} />
-      <View style={styles.orders}>
-        <Text>Orders</Text>
-        <Text>Orders</Text>
-        <Text>Orders</Text>
-        <Text>Orders</Text>
-        <Text>Orders</Text>
-        <Text>Orders</Text>
-      </View>
+      {!isLoading && (
+        <FlatList
+          data={data}
+          renderItem={({ item }) => <Text>{item}</Text>}
+          key={(item) => item}
+        />
+      )}
     </View>
   );
 };
