@@ -5,14 +5,15 @@ export default styles = StyleSheet.create({
   container: {
     backgroundColor: colors.secondary,
     height: 80,
-    paddingTop: 20,
-    width: '100%',
+    borderBottomEndRadius: 80,
+    borderBottomStartRadius: 80,
+    width: 300,
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
     fontSize: 30,
     fontFamily: 'Croissant',
-    color: 'white',
+    color: 'black',
   },
 });

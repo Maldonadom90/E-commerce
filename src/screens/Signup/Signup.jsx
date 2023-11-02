@@ -14,10 +14,10 @@ const Signup = ({ navigation }) => {
   const dispatch = useDispatch();
 
   const onSubmit = () => {
-    console.log('Login button');
+    console.log('boton de submit');
     triggerSignup({
-      email,
-      password,
+      email: email.value,
+      password: password.value,
     })
       .unwrap()
       .then((result) => {

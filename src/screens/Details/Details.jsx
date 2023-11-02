@@ -1,5 +1,5 @@
 import { Image, Pressable, SafeAreaView, Text, View } from 'react-native';
-
+import AntDesign from '@expo/vector-icons/AntDesign';
 import React from 'react';
 import { addItem } from '../../features/cart/cartSlice';
 import styles from './Details.style';
@@ -22,10 +22,10 @@ const Details = ({ route }) => {
         />
       </View>
       <Text style={styles.title}>{product.title}</Text>
-      <Text>{product.description}</Text>
+      <Text style={styles.description}>{product.description}</Text>
       <Text style={styles.price}>{`$ ${product.price}`}</Text>
-      <Pressable onPress={handleAddToCart}>
-        <Text>Add to cart</Text>
+      <Pressable onPress={handleAddToCart} style={styles.buttons}>
+        <AntDesign name="shoppingcart" size={30} color={'black'} />
       </Pressable>
     </SafeAreaView>
   );

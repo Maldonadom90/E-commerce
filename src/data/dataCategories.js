@@ -1,60 +1,20 @@
 export default [
-  { title: 'smartphones' },
   {
-    title: 'laptops',
+    title: 'Remeras',
+    images: [
+      'https://res.cloudinary.com/dfnz48rpd/image/upload/v1698701932/iconoRemera_tdtbpj.png',
+    ],
   },
   {
-    title: 'fragrances',
+    title: 'Pantalones',
+    images: [
+      'https://res.cloudinary.com/dfnz48rpd/image/upload/v1698701932/iconoPantalones_t5fvpe.png',
+    ],
   },
   {
-    title: 'skincare',
-  },
-  {
-    title: 'groceries',
-  },
-  {
-    title: 'home-decoration',
-  },
-  {
-    title: 'furniture',
-  },
-  {
-    title: 'tops',
-  },
-  {
-    title: 'womens-dresses',
-  },
-  {
-    title: 'womens-shoes',
-  },
-  {
-    title: 'mens-shirts',
-  },
-  {
-    title: 'mens-shoes',
-  },
-  {
-    title: 'mens-watches',
-  },
-  {
-    title: 'womens-watches',
-  },
-  {
-    title: 'womens-bags',
-  },
-  {
-    title: 'womens-jewellery',
-  },
-  {
-    title: 'sunglasses',
-  },
-  {
-    title: 'automotive',
-  },
-  {
-    title: 'motorcycle',
-  },
-  {
-    title: 'lighting',
+    title: 'Zapatillas',
+    images: [
+      'https://res.cloudinary.com/dfnz48rpd/image/upload/v1698701932/iconoZapatillas_u8w6ym.png',
+    ],
   },
 ];

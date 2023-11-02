@@ -1,4 +1,4 @@
-import { Pressable, Text, View } from 'react-native';
+import { Image, Pressable, Text, View } from 'react-native';
 
 import React from 'react';
 import { setCategorySelected } from '../../../../features/shop/shopSlice';

@@ -1,19 +1,26 @@
 import * as ImagePicker from 'expo-image-picker';
+import { clearUser } from '../../features/auth/authSlice';
+import { deleteSession } from '../../db';
+import Feather from '@expo/vector-icons/Feather';
 
 import { Image, Pressable, Text, View } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { setCameraImage } from '../../features/auth/authSlice';
 import styles from './Profile.styles';
 import { usePostProfileImageMutation } from '../../services/shopApi';
 
-const Profile = ({ navigation }) => {
+const Profile = ({}) => {
   const image = useSelector((state) => state.auth.imageCamera);
   const { localId } = useSelector((state) => state.auth);
   const [triggerSaveProfileImage, result] = usePostProfileImageMutation();
   const dispatch = useDispatch();
 
+  const logout = () => {
+    dispatch(clearUser());
+    deleteSession();
+  };
   const verifyCameraPermissions = async () => {
     const { granted } = await ImagePicker.requestCameraPermissionsAsync();
     if (!granted) {
@@ -72,12 +79,7 @@ const Profile = ({ navigation }) => {
       <Pressable style={styles.cameraButton} onPress={confirmImage}>
         <Text>Confirmar</Text>
       </Pressable>
-      <Pressable
-        style={{ ...styles.cameraButton, marginTop: 20 }}
-        onPress={() => navigation.navigate('Location')}
-      >
-        <Text>Ir a mi ubicación</Text>
-      </Pressable>
+      <Feather name="log-out" size={24} onPress={logout} />
     </View>
   );
 };

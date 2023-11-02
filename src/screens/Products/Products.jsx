@@ -39,7 +39,7 @@ const Products = ({ navigation }) => {
           <FlatList
             data={products}
             numColumns={2}
-            columnWrapperStyle={styles.weapperStyle}
+            //columnWrapperStyle={styles.weapperStyle}//
             renderItem={({ item }) => (
               <TouchableOpacity
                 style={styles.productContainer}
@@ -54,7 +54,7 @@ const Products = ({ navigation }) => {
                   }}
                 />
                 <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.price}>{`$${item.price.toFixed(2)}`}</Text>
+                <Text style={styles.price}>{`$${item.price}`}</Text>
               </TouchableOpacity>
             )}
             keyExtractor={(item) => item.id}

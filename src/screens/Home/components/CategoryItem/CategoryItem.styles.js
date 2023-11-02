@@ -4,9 +4,9 @@ import { colors } from '../../../../constants/colors';
 export default styles = StyleSheet.create({
   container: {
     backgroundColor: colors.secondary,
-    marginVertical: 15,
-    height: 80,
+    marginVertical: 20,
     width: '100%',
+    height: 100,
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
@@ -14,8 +14,10 @@ export default styles = StyleSheet.create({
   contentContainer: {
     width: '100%',
     alignItems: 'center',
+    justifyContent: 'space-between',
   },
   text: {
-    fontSize: 20,
+    fontSize: 28,
+    fontFamily: 'Croissant',
   },
 });

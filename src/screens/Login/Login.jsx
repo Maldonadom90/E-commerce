@@ -15,10 +15,10 @@ const Login = ({ navigation }) => {
 
   const onSubmit = () => {
     triggerLogin({
-      email,
-      password,
+      email: email,
+      password: password,
     })
-      .unwrap() /*usamos .unwrap para acceder a la respuesta del servidor */
+      .unwrap()
       .then((result) => {
         dispatch(setUser(result));
         insertSession({
@@ -27,7 +27,7 @@ const Login = ({ navigation }) => {
           token: result.idToken,
         })
           .then((result) => console.log(result))
-          .catch((error) => console.log(error.message));
+          .catch((error) => console.log(error));
       });
   };
 
