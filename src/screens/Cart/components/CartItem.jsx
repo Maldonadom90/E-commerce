@@ -7,24 +7,24 @@ import styles from './CartItem.styles';
 const Cartitem = ({ item }) => {
   return (
     <View style={styles.container}>
-      <View>
-        <Image
-          style={styles.image}
-          source={{
-            uri: item.images[0],
-          }}
-        />
-      </View>
-      <View>
-        <Text style={styles.name}>{item.title}</Text>
-      </View>
-      <View style={styles.details}>
+      <View style={styles.imageContainer}>
         <View>
-          <Text>{item.quantity}</Text>
-          <Text>{item.price}</Text>
+          <Image
+            style={styles.image}
+            source={{
+              uri: item.images[0],
+            }}
+          />
         </View>
-        <Pressable>
-          <Feather name="trash" size={24} color={'red'} />
+        <View style={styles.details}>
+          <Text style={styles.name}>{item.title}</Text>
+          <Text>Cantidad: {item.quantity} unidades</Text>
+          <Text>Total: ${item.price}</Text>
+        </View>
+      </View>
+      <View>
+        <Pressable style={styles.trash}>
+          <Feather name="trash" size={25} color={'black'} />
         </Pressable>
       </View>
     </View>

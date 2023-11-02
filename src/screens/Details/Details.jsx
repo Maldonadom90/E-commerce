@@ -25,7 +25,7 @@ const Details = ({ route }) => {
       <Text style={styles.description}>{product.description}</Text>
       <Text style={styles.price}>{`$ ${product.price}`}</Text>
       <Pressable onPress={handleAddToCart} style={styles.buttons}>
-        <AntDesign name="shoppingcart" size={30} color={'black'} />
+        <AntDesign name="shoppingcart" size={30} color={'white'} />
       </Pressable>
     </SafeAreaView>
   );
