@@ -17,7 +17,12 @@ const Cart = () => {
   const renderItem = ({ item }) => <CartItem item={item} />;
 
   const confirmCart = () => {
-    triggerPost({ total, cart, user: 'LoggedUser' });
+    triggerPost({
+      total,
+      cart,
+      user: 'LoggedUser',
+      date: new Date().toLocaleString(), //Agrega la fecha a las ordenes
+    });
     dispatch(clearCart());
   };
   return (

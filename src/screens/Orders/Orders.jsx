@@ -1,4 +1,5 @@
 import { FlatList, Text, View } from 'react-native';
+import { Header } from '../../components';
 
 import React from 'react';
 import styles from './Orders.styles';
@@ -8,12 +9,19 @@ const Orders = () => {
   const { data, isLoading } = useGetOrdersQuery();
 
   return (
-    <View styles={styles.container}>
+    <View style={styles.container}>
+      <Header title={'Ordenes'} />
       {!isLoading && (
         <FlatList
-          data={data}
-          renderItem={({ item }) => <Text>{item}</Text>}
-          key={(item) => item}
+          data={Object.values(data)}
+          renderItem={({ item }) => (
+            <View style={styles.orderContainer} key={item.id}>
+              <Text style={styles.header}>Orden de compra del día:</Text>
+              <Text style={styles.text}>{item.date}</Text>
+              <Text style={styles.text}>Total: ${item.total}</Text>
+            </View>
+          )}
+          keyExtractor={(item) => item.id}
         />
       )}
     </View>

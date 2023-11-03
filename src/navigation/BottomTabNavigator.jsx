@@ -26,7 +26,7 @@ function BottomTabNavigator() {
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={focused ? styles.iconContainer : null}>
-              <Feather name="shopping-bag" size={24} color={colors.tertiary} />
+              <Feather name="shopping-bag" size={27} color={colors.tertiary} />
             </View>
           ),
         }}
@@ -37,7 +37,7 @@ function BottomTabNavigator() {
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={focused ? styles.iconContainer : null}>
-              <Feather name="shopping-cart" size={24} color={colors.tertiary} />
+              <Feather name="shopping-cart" size={27} color={colors.tertiary} />
             </View>
           ),
         }}
@@ -48,7 +48,7 @@ function BottomTabNavigator() {
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={focused ? styles.iconContainer : null}>
-              <Feather name="list" size={24} color={colors.tertiary} />
+              <Feather name="list" size={27} color={colors.tertiary} />
             </View>
           ),
         }}
@@ -59,7 +59,7 @@ function BottomTabNavigator() {
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={focused ? styles.iconContainer : null}>
-              <Feather name="user" size={24} color={colors.tertiary} />
+              <Feather name="user" size={27} color={colors.tertiary} />
             </View>
           ),
         }}
@@ -72,11 +72,11 @@ export default BottomTabNavigator;
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: colors.secondary,
+    backgroundColor: colors.fifth,
     paddingTop: 1,
   },
   iconContainer: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.secondary,
     borderRadius: 20,
     padding: 8,
     justifyContent: 'center',

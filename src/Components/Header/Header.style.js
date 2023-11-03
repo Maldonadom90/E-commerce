@@ -3,11 +3,11 @@ import { colors } from '../../constants/colors';
 
 export default styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.secondary,
+    backgroundColor: colors.tertiary,
     height: 80,
-    borderBottomEndRadius: 80,
-    borderBottomStartRadius: 80,
-    width: 300,
+    borderBottomEndRadius: 50,
+    borderBottomStartRadius: 50,
+    width: 400,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -15,5 +15,6 @@ export default styles = StyleSheet.create({
     fontSize: 30,
     fontFamily: 'Croissant',
     color: 'black',
+    textTransform: 'uppercase',
   },
 });
