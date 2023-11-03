@@ -3,7 +3,7 @@ import { clearUser } from '../../features/auth/authSlice';
 import { deleteSession } from '../../db';
 import Feather from '@expo/vector-icons/Feather';
 
-import { Image, Pressable, Text, View } from 'react-native';
+import { Image, TouchableOpacity, Text, View } from 'react-native';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -67,19 +67,30 @@ const Profile = ({}) => {
       ) : (
         <Image
           source={{
-            uri: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA_O--Mh2cTv_HsHar7HFlUZ_Z4-kii8yWoif70z1KBg&s',
           }}
           style={styles.image}
           resizeMode="cover"
         />
       )}
-      <Pressable style={styles.cameraButton} onPress={pickImage}>
-        <Text>Tomar Foto de perfil</Text>
-      </Pressable>
-      <Pressable style={styles.cameraButton} onPress={confirmImage}>
-        <Text>Confirmar</Text>
-      </Pressable>
-      <Feather name="log-out" size={24} onPress={logout} />
+      <TouchableOpacity
+        style={styles.cameraButton}
+        onPress={pickImage}
+        activeOpacity={0.7}
+      >
+        <Text style={styles.text}>Tomar Foto de perfil</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.cameraButton}
+        onPress={confirmImage}
+        activeOpacity={0.7}
+      >
+        <Text style={styles.text}>Confirmar</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.deleteSession} activeOpacity={0.7}>
+        <Text style={styles.text2}>Cerrar Sesión</Text>
+        <Feather name="log-out" size={20} onPress={logout} />
+      </TouchableOpacity>
     </View>
   );
 };

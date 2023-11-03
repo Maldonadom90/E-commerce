@@ -16,9 +16,9 @@ export default styles = StyleSheet.create({
     paddingBottom: 30,
   },
   productContainer: {
-    width: 150,
+    width: 180,
     height: 260,
-    marginHorizontal: 20,
+    marginHorizontal: 5,
     marginVertical: 10,
     backgroundColor: colors.primary,
     borderWidth: 1,
@@ -29,10 +29,10 @@ export default styles = StyleSheet.create({
     position: 'relative',
   },
   image: {
-    borderRadius: 35,
+    borderRadius: 15,
     position: 'absolute',
-    top: -15,
-    width: 160,
+    top: -8,
+    width: 180,
     height: 170,
   },
   title: {

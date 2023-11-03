@@ -20,7 +20,6 @@ const Products = ({ navigation }) => {
   const { data, isLoading } = useGetProductsByCategoryQuery(category);
 
   useEffect(() => {
-    //(data, isLoading)
     if (!isLoading) {
       const dataArr = Object.values(data);
       setProducts(dataArr);
@@ -39,7 +38,6 @@ const Products = ({ navigation }) => {
           <FlatList
             data={products}
             numColumns={2}
-            //columnWrapperStyle={styles.weapperStyle}//
             renderItem={({ item }) => (
               <TouchableOpacity
                 style={styles.productContainer}
