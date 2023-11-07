@@ -10,6 +10,19 @@ export default styles = StyleSheet.create({
     flex: 4,
     margin: 15,
     backgroundColor: colors.tertiary,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: colors.fifth,
+    borderStyle: 'solid',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 8,
+    },
+    shadowOpacity: 0.44,
+    shadowRadius: 10.32,
+
+    elevation: 16,
   },
   buttonContainer: {
     borderRadius: 10,

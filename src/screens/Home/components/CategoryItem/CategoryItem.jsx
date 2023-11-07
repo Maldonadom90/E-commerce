@@ -1,4 +1,4 @@
-import { Image, Pressable, Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 
 import React from 'react';
 import { setCategorySelected } from '../../../../features/shop/shopSlice';
@@ -15,7 +15,7 @@ const CategoryItem = ({ category, navigation }) => {
       }}
       style={styles.container}
     >
-      <View style={styles.contentContainer}>
+      <View>
         <Text style={styles.text}>{category}</Text>
       </View>
     </Pressable>

@@ -8,7 +8,7 @@ import store from './src/store';
 import { useFonts } from 'expo-font';
 
 init()
-  .then(() => console.log('DB initialized'))
+  .then(() => console.log('DataBase ON'))
   .catch((err) => console.log('DB failed', err.message));
 
 export default function App() {

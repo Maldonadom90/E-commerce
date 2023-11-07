@@ -51,7 +51,6 @@ const Products = ({ navigation }) => {
                     uri: item.images[0],
                   }}
                 />
-                <Text style={styles.title}>{item.title}</Text>
                 <Text style={styles.price}>{`$${item.price}`}</Text>
               </TouchableOpacity>
             )}

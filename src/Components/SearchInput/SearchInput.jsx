@@ -26,7 +26,7 @@ const SearchInput = ({ onSearch }) => {
         style={styles.input}
         value={value}
         onChangeText={setValue}
-        placeholder="Search"
+        placeholder="Buscar"
       />
       <AntDesign name="search1" size={25} color={'black'} onPress={search} />
       <AntDesign

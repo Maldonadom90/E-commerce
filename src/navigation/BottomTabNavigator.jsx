@@ -59,7 +59,7 @@ function BottomTabNavigator() {
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={focused ? styles.iconContainer : null}>
-              <Feather name="user" size={27} color={colors.tertiary} />
+              <Feather name="settings" size={27} color={colors.tertiary} />
             </View>
           ),
         }}

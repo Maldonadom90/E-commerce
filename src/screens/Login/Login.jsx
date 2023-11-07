@@ -34,7 +34,7 @@ const Login = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.loginContainer}>
-        <Text>Login to start</Text>
+        <Text style={styles.text1}>Iniciar Sesión</Text>
         <TextInput
           style={styles.inputEmail}
           value={email}
@@ -46,14 +46,14 @@ const Login = ({ navigation }) => {
           onChangeText={setPassword}
         />
         <Pressable style={styles.loginButton} onPress={onSubmit}>
-          <Text style={{ color: 'white' }}>Login</Text>
+          <Text style={{ color: 'white' }}>iniciar sesión</Text>
         </Pressable>
-        <Text>No have an account?</Text>
+        <Text style={styles.text1}>No tienes una cuenta?</Text>
         <Pressable
           style={styles.loginButton}
           onPress={() => navigation.navigate('Signup')}
         >
-          <Text style={{ color: 'white' }}>Sign up</Text>
+          <Text style={{ color: 'white' }}>Registrarse</Text>
         </Pressable>
       </View>
     </View>

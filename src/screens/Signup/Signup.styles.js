@@ -14,6 +14,10 @@ export default styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  text1: {
+    color: colors.primary,
+    fontSize: 23,
+  },
   inputEmail: {
     width: '95%',
     backgroundColor: colors.primary,
@@ -23,13 +27,14 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     paddingStart: 20,
-    color: 'white',
+    color: 'black',
   },
   loginButton: {
     backgroundColor: colors.tertiary,
     width: '50%',
     height: 50,
     borderRadius: 10,
+    marginTop: 20,
     marginBottom: 15,
     justifyContent: 'center',
     alignItems: 'center',

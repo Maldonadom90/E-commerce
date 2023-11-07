@@ -3,16 +3,23 @@ import { colors } from '../../constants/colors';
 
 export default styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.tertiary,
-    height: 80,
-    borderBottomEndRadius: 50,
-    borderBottomStartRadius: 50,
+    backgroundColor: colors.primary,
     width: 400,
-    justifyContent: 'center',
+    height: 80,
+    padding: 20,
+    borderWidth: 2,
+    borderColor: colors.fifth,
+    borderStyle: 'solid',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
+  logo: {
+    width: 90,
+    height: 90,
+  },
   text: {
-    fontSize: 30,
+    fontSize: 24,
     fontFamily: 'Croissant',
     color: 'black',
     textTransform: 'uppercase',

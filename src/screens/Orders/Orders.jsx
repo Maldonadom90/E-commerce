@@ -15,13 +15,15 @@ const Orders = () => {
         <FlatList
           data={Object.values(data)}
           renderItem={({ item }) => (
-            <View style={styles.orderContainer} key={item.id}>
+            <View style={styles.orderContainer}>
               <Text style={styles.header}>Orden de compra del día:</Text>
               <Text style={styles.text}>{item.date}</Text>
               <Text style={styles.text}>Total: ${item.total}</Text>
             </View>
           )}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) =>
+            item.id ? item.id.toString() : Math.random().toString()
+          }
         />
       )}
     </View>

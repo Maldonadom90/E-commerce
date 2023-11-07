@@ -1,10 +1,17 @@
 import { Image, Pressable, Text, View } from 'react-native';
-
 import Feather from '@expo/vector-icons/Feather';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { removeItem } from '../../../features/cart/cartSlice';
 import styles from './CartItem.styles';
 
 const Cartitem = ({ item }) => {
+  const dispatch = useDispatch();
+
+  const handleRemoveItem = () => {
+    dispatch(removeItem(item.id));
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -23,7 +30,7 @@ const Cartitem = ({ item }) => {
         </View>
       </View>
       <View>
-        <Pressable style={styles.trash}>
+        <Pressable style={styles.trash} onPress={handleRemoveItem}>
           <Feather name="trash" size={25} color={'black'} />
         </Pressable>
       </View>

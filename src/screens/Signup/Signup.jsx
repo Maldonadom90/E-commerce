@@ -14,10 +14,9 @@ const Signup = ({ navigation }) => {
   const dispatch = useDispatch();
 
   const onSubmit = () => {
-    console.log('boton de submit');
     triggerSignup({
-      email: email.value,
-      password: password.value,
+      email: email,
+      password: password,
     })
       .unwrap()
       .then((result) => {
@@ -30,7 +29,7 @@ const Signup = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.loginContainer}>
-        <Text>Sing up to start</Text>
+        <Text style={styles.text1}>Registrate para ingresar</Text>
         <TextInput
           style={styles.inputEmail}
           value={email}
@@ -47,14 +46,14 @@ const Signup = ({ navigation }) => {
           onChangeText={setConfirmPass}
         />
         <Pressable style={styles.loginButton} onPress={onSubmit}>
-          <Text style={{ color: 'white' }}>Sign up</Text>
+          <Text style={{ color: 'white' }}>Registrarse</Text>
         </Pressable>
-        <Text>Already have an account?</Text>
+        <Text style={styles.text1}>Ya tienes una cuenta?</Text>
         <Pressable
           style={styles.loginButton}
           onPress={() => navigation.navigate('Login')}
         >
-          <Text style={{ color: 'white' }}>Login</Text>
+          <Text style={{ color: 'white' }}>Iniciar Sesión</Text>
         </Pressable>
       </View>
     </View>

@@ -6,7 +6,7 @@ export default styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.tertiary,
+    backgroundColor: colors.fifth,
   },
   loginContainer: {
     width: '100%',
@@ -23,15 +23,20 @@ export default styles = StyleSheet.create({
     alignItems: 'center',
     paddingStart: 20,
     borderRadius: 10,
-    color: 'white',
+    color: 'black',
   },
   loginButton: {
-    backgroundColor: colors.secondary,
+    backgroundColor: colors.tertiary,
     width: '50%',
     height: 50,
     borderRadius: 10,
     marginBottom: 15,
+    marginTop: 15,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  text1: {
+    color: colors.primary,
+    fontSize: 24,
   },
 });
